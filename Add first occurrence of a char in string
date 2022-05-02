@@ -1,0 +1,10 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        
+        for i in range(len(s)):
+            s1 = s
+            s1 = s1[0:i:] + s1[i+1::]
+            if s[i] not in s1:
+                return i
+        return -1
+            
